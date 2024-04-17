@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>A segmentation-based sequence residual attention model for KRAS gene mutation status prediction in colorectal cancer—— 基于分割序列的残差注意力模型预测结直肠癌KRAS基因突变</title>
+    <link href="/2024/04/17/4/"/>
+    <url>/2024/04/17/4/</url>
+    
+    <content type="html"><![CDATA[<h1 id="一-主要贡献"><a href="#一-主要贡献" class="headerlink" title="一.主要贡献"></a>一.主要贡献</h1><ol><li>PG-SN用来捕获不同层次病变的分割特征，生成掩膜，给CG-CN提供予指导（精确的病灶定位信息），且与PG-SN共享编码器和解码器。</li><li>设计了一种边界损失，将其与Combo损失联合使用，以解决病变边界像素难以正确分类的问题。</li><li>T2加权的MRI图像，利用分割任务产生的分割特征和病变掩膜来提高分类任务的有效性。</li></ol><h1 id="二-现存问题"><a href="#二-现存问题" class="headerlink" title="二.现存问题"></a>二.现存问题</h1><ol><li>数据样本较少。虽然许多医疗机构可以生成大量的患者病理图像，但病理图像有效注释的数量少限制了有效病理图像的数量</li><li>病变图像异质性高。在形状和大小上，不同类型病变之间的差异很小，而同一类型病变之间的差异很大。此外，病变与周围组织的对比度较低，导致病变边界模糊，给模型精确定位病变增加了困难。</li><li>病变边界像素难以正确分类。<br><img src="/img/6.jpg" alt="肠道分割示意图"></li></ol><h1 id="三-模型结构"><a href="#三-模型结构" class="headerlink" title="三.模型结构"></a>三.模型结构</h1><h2 id="1-PG-SN"><a href="#1-PG-SN" class="headerlink" title="1.PG-SN"></a>1.PG-SN</h2><p><img src="/img/7.jpg" alt="模型结构"></p><h2 id="2-Pixel-Gated-Segmentation-Network-PG-SN"><a href="#2-Pixel-Gated-Segmentation-Network-PG-SN" class="headerlink" title="2.Pixel Gated Segmentation Network (PG-SN)"></a>2.Pixel Gated Segmentation Network (PG-SN)</h2><p><img src="/img/8.jpg" alt="PG-SN"></p><h2 id="3-SRB-BLOCK"><a href="#3-SRB-BLOCK" class="headerlink" title="3.SRB-BLOCK"></a>3.SRB-BLOCK</h2><p><img src="/img/9.jpg" alt="SRB"></p><h2 id="4-Pixel-gated-attention-module（PGA）"><a href="#4-Pixel-gated-attention-module（PGA）" class="headerlink" title="4.Pixel gated attention module（PGA）"></a>4.Pixel gated attention module（PGA）</h2><h3 id="在UNet结构中，编码器特征较低，而解码器特征较高且较抽象。在UNet系列中，编码器特征和解码器特征主要采用直接连接的方式融合，由于特征尺度不均匀，深度细节特征丢失。虽然在跳跃连接上增加了一系列卷积层来缓解语义问题，但如果卷积数不合适，不仅不能缓解特征之间的差异，还会导致其他问题。因此，使用直接连接和增加卷积层的融合方法并不能解决语义差距。"><a href="#在UNet结构中，编码器特征较低，而解码器特征较高且较抽象。在UNet系列中，编码器特征和解码器特征主要采用直接连接的方式融合，由于特征尺度不均匀，深度细节特征丢失。虽然在跳跃连接上增加了一系列卷积层来缓解语义问题，但如果卷积数不合适，不仅不能缓解特征之间的差异，还会导致其他问题。因此，使用直接连接和增加卷积层的融合方法并不能解决语义差距。" class="headerlink" title="在UNet结构中，编码器特征较低，而解码器特征较高且较抽象。在UNet系列中，编码器特征和解码器特征主要采用直接连接的方式融合，由于特征尺度不均匀，深度细节特征丢失。虽然在跳跃连接上增加了一系列卷积层来缓解语义问题，但如果卷积数不合适，不仅不能缓解特征之间的差异，还会导致其他问题。因此，使用直接连接和增加卷积层的融合方法并不能解决语义差距。"></a>在UNet结构中，编码器特征较低，而解码器特征较高且较抽象。在UNet系列中，编码器特征和解码器特征主要采用直接连接的方式融合，由于特征尺度不均匀，深度细节特征丢失。虽然在跳跃连接上增加了一系列卷积层来缓解语义问题，但如果卷积数不合适，不仅不能缓解特征之间的差异，还会导致其他问题。因此，使用直接连接和增加卷积层的融合方法并不能解决语义差距。</h3><p><img src="/img/10.jpg" alt="PGA"></p><h2 id="5-Channel-guided-classification-network-CG-CN"><a href="#5-Channel-guided-classification-network-CG-CN" class="headerlink" title="5.Channel guided  classification network (CG-CN)"></a>5.Channel guided  classification network (CG-CN)</h2><h3 id="它由四个部分组成-一个新的分类编码器、一个分类器、一个编码器和一个解码器。编码器和解码器与PG-SN共享相同的结构和参数。"><a href="#它由四个部分组成-一个新的分类编码器、一个分类器、一个编码器和一个解码器。编码器和解码器与PG-SN共享相同的结构和参数。" class="headerlink" title="它由四个部分组成:一个新的分类编码器、一个分类器、一个编码器和一个解码器。编码器和解码器与PG-SN共享相同的结构和参数。"></a>它由四个部分组成:一个新的分类编码器、一个分类器、一个编码器和一个解码器。编码器和解码器与PG-SN共享相同的结构和参数。</h3><p><img src="/img/11.jpg" alt="CG-CN"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>论文分享</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>直肠</tag>
+      
+      <tag>分割</tag>
+      
+      <tag>分类</tag>
+      
+      <tag>论文分享</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>静态博客搭建总结报告</title>
     <link href="/2024/04/17/3/"/>
     <url>/2024/04/17/3/</url>
@@ -45,11 +76,11 @@
     
     <tags>
       
-      <tag>医学图像</tag>
-      
       <tag>肺</tag>
       
       <tag>定位分割</tag>
+      
+      <tag>医学图像</tag>
       
     </tags>
     
@@ -74,11 +105,11 @@
     
     <tags>
       
+      <tag>医学图像</tag>
+      
       <tag>直肠</tag>
       
       <tag>分割任务</tag>
-      
-      <tag>医学图像</tag>
       
     </tags>
     

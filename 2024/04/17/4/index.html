@@ -16,22 +16,32 @@
   <meta name="author" content="Imamts">
   <meta name="keywords" content="">
   
-    <meta name="description" content="静态博客搭建总结报告1. 框架选择1.1 HexoHexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 1.2 Github PagesGithub Pages 是一个静态站点托管服务，它直接从 Github 的仓库中获取静态页面文件，用来展示托管在 Github 上的项目。 1.3 选择原因 Hexo">
+    <meta name="description" content="一.主要贡献 PG-SN用来捕获不同层次病变的分割特征，生成掩膜，给CG-CN提供予指导（精确的病灶定位信息），且与PG-SN共享编码器和解码器。 设计了一种边界损失，将其与Combo损失联合使用，以解决病变边界像素难以正确分类的问题。 T2加权的MRI图像，利用分割任务产生的分割特征和病变掩膜来提高分类任务的有效性。  二.现存问题 数据样本较少。虽然许多医疗机构可以生成大量的患者病理图像，但病">
 <meta property="og:type" content="article">
-<meta property="og:title" content="静态博客搭建总结报告">
-<meta property="og:url" content="https://imamtss.github.io/2024/04/17/3/index.html">
+<meta property="og:title" content="A segmentation-based sequence residual attention model for KRAS gene mutation status prediction in colorectal cancer—— 基于分割序列的残差注意力模型预测结直肠癌KRAS基因突变">
+<meta property="og:url" content="https://imamtss.github.io/2024/04/17/4/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="静态博客搭建总结报告1. 框架选择1.1 HexoHexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 1.2 Github PagesGithub Pages 是一个静态站点托管服务，它直接从 Github 的仓库中获取静态页面文件，用来展示托管在 Github 上的项目。 1.3 选择原因 Hexo">
+<meta property="og:description" content="一.主要贡献 PG-SN用来捕获不同层次病变的分割特征，生成掩膜，给CG-CN提供予指导（精确的病灶定位信息），且与PG-SN共享编码器和解码器。 设计了一种边界损失，将其与Combo损失联合使用，以解决病变边界像素难以正确分类的问题。 T2加权的MRI图像，利用分割任务产生的分割特征和病变掩膜来提高分类任务的有效性。  二.现存问题 数据样本较少。虽然许多医疗机构可以生成大量的患者病理图像，但病">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-04-17T04:57:13.497Z">
-<meta property="article:modified_time" content="2024-04-17T05:27:40.959Z">
+<meta property="og:image" content="https://imamtss.github.io/img/6.jpg">
+<meta property="og:image" content="https://imamtss.github.io/img/7.jpg">
+<meta property="og:image" content="https://imamtss.github.io/img/8.jpg">
+<meta property="og:image" content="https://imamtss.github.io/img/9.jpg">
+<meta property="og:image" content="https://imamtss.github.io/img/10.jpg">
+<meta property="og:image" content="https://imamtss.github.io/img/11.jpg">
+<meta property="article:published_time" content="2024-04-17T05:45:28.750Z">
+<meta property="article:modified_time" content="2024-04-17T06:03:48.197Z">
 <meta property="article:author" content="Imamts">
-<meta property="article:tag" content="总结">
+<meta property="article:tag" content="直肠">
+<meta property="article:tag" content="分割">
+<meta property="article:tag" content="分类">
+<meta property="article:tag" content="论文分享">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://imamtss.github.io/img/6.jpg">
   
   
   
-  <title>静态博客搭建总结报告 - Hexo</title>
+  <title>A segmentation-based sequence residual attention model for KRAS gene mutation status prediction in colorectal cancer—— 基于分割序列的残差注意力模型预测结直肠癌KRAS基因突变 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -216,7 +226,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="静态博客搭建总结报告"></span>
+            <span id="subtitle" data-typed-text="A segmentation-based sequence residual attention model for KRAS gene mutation status prediction in colorectal cancer—— 基于分割序列的残差注意力模型预测结直肠癌KRAS基因突变"></span>
           
         </div>
 
@@ -227,7 +237,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-04-17 12:57" pubdate>
+        <time datetime="2024-04-17 13:45" pubdate>
           2024年4月17日 下午
         </time>
       </span>
@@ -239,7 +249,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          424 字
+          501 字
         
       </span>
     
@@ -250,7 +260,7 @@
         
         
         
-          4 分钟
+          5 分钟
         
       </span>
     
@@ -287,43 +297,26 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">静态博客搭建总结报告</h1>
+            <h1 id="seo-header">A segmentation-based sequence residual attention model for KRAS gene mutation status prediction in colorectal cancer—— 基于分割序列的残差注意力模型预测结直肠癌KRAS基因突变</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="静态博客搭建总结报告"><a href="#静态博客搭建总结报告" class="headerlink" title="静态博客搭建总结报告"></a>静态博客搭建总结报告</h1><h2 id="1-框架选择"><a href="#1-框架选择" class="headerlink" title="1. 框架选择"></a>1. 框架选择</h2><h3 id="1-1-Hexo"><a href="#1-1-Hexo" class="headerlink" title="1.1 Hexo"></a>1.1 Hexo</h3><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<h3 id="1-2-Github-Pages"><a href="#1-2-Github-Pages" class="headerlink" title="1.2 Github Pages"></a>1.2 Github Pages</h3><p>Github Pages 是一个静态站点托管服务，它直接从 Github 的仓库中获取静态页面文件，用来展示托管在 Github 上的项目。</p>
-<h3 id="1-3-选择原因"><a href="#1-3-选择原因" class="headerlink" title="1.3 选择原因"></a>1.3 选择原因</h3><ul>
-<li>Hexo 框架简单，容易上手，并且有丰富的主题可供选择。</li>
-<li>Github Pages 免费，并且可以绑定自己的域名。</li>
-</ul>
-<h3 id="1-4-缺点"><a href="#1-4-缺点" class="headerlink" title="1.4 缺点"></a>1.4 缺点</h3><ul>
-<li>国内访问速度较慢。</li>
-<li>无法自定义域名。</li>
-</ul>
-<h3 id="1-5-优点"><a href="#1-5-优点" class="headerlink" title="1.5 优点"></a>1.5 优点</h3><ul>
-<li>免费，并且可以绑定自己的域名。</li>
-<li>国内访问速度较快。</li>
-</ul>
-<h2 id="2-搭建过程"><a href="#2-搭建过程" class="headerlink" title="2. 搭建过程"></a>2. 搭建过程</h2><h3 id="2-1-安装Hexo"><a href="#2-1-安装Hexo" class="headerlink" title="2.1 安装Hexo"></a>2.1 安装Hexo</h3><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm">npm install -g hexo-<span class="hljs-keyword">cli</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="2-2-初始化"><a href="#2-2-初始化" class="headerlink" title="2.2 初始化"></a>2.2 初始化</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs csharp">hexo <span class="hljs-keyword">init</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="2-3-安装依赖"><a href="#2-3-安装依赖" class="headerlink" title="2.3 安装依赖"></a>2.3 安装依赖</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">npm <span class="hljs-keyword">install</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="2-4-启动服务"><a href="#2-4-启动服务" class="headerlink" title="2.4 启动服务"></a>2.4 启动服务</h3><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs axapta">hexo <span class="hljs-keyword">server</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="2-5-部署到Github-Pages"><a href="#2-5-部署到Github-Pages" class="headerlink" title="2.5 部署到Github Pages"></a>2.5 部署到Github Pages</h3><h4 id="2-5-1-创建Github仓库"><a href="#2-5-1-创建Github仓库" class="headerlink" title="2.5.1 创建Github仓库"></a>2.5.1 创建Github仓库</h4><p>仓库名格式为：<code>&lt;username&gt;.github.io</code></p>
-<h4 id="2-5-2-修改配置文件"><a href="#2-5-2-修改配置文件" class="headerlink" title="2.5.2 修改配置文件"></a>2.5.2 修改配置文件</h4><p>修改<code>_config.yml</code>文件，将<code>deploy</code>字段修改为：</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">deploy:</span><br><span class="hljs-symbol">  type:</span> git<br><span class="hljs-symbol">  repo:</span> https:<span class="hljs-comment">//github.com/&lt;username&gt;/&lt;username&gt;.github.io.git</span><br><span class="hljs-symbol">  branch:</span> master<br></code></pre></td></tr></table></figure>
-
-<h4 id="2-5-3-部署到Github-Pages"><a href="#2-5-3-部署到Github-Pages" class="headerlink" title="2.5.3 部署到Github Pages"></a>2.5.3 部署到Github Pages</h4><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo deploy</span><br></code></pre></td></tr></table></figure>
-<h2 id="3-总结"><a href="#3-总结" class="headerlink" title="3.总结"></a>3.总结</h2><ul>
-<li>本次实验使用Hexo框架搭建了一个静态博客，并且将其部署到了Github Pages上。通过本次实验，我学会了如何使用Hexo框架搭建静态博客，以及如何将博客部署到Github Pages上。同时，我也学会了如何使用Github仓库来存储和管理博客内容。 </li>
-<li>搭建完成后，需要进行一定的配置和优化，以提高访问速度和用户体验。</li>
-<li>搭建完成后，需要进行一定的维护和更新，以保持博客的更新和活跃。</li>
-</ul>
+                <h1 id="一-主要贡献"><a href="#一-主要贡献" class="headerlink" title="一.主要贡献"></a>一.主要贡献</h1><ol>
+<li>PG-SN用来捕获不同层次病变的分割特征，生成掩膜，给CG-CN提供予指导（精确的病灶定位信息），且与PG-SN共享编码器和解码器。</li>
+<li>设计了一种边界损失，将其与Combo损失联合使用，以解决病变边界像素难以正确分类的问题。</li>
+<li>T2加权的MRI图像，利用分割任务产生的分割特征和病变掩膜来提高分类任务的有效性。</li>
+</ol>
+<h1 id="二-现存问题"><a href="#二-现存问题" class="headerlink" title="二.现存问题"></a>二.现存问题</h1><ol>
+<li>数据样本较少。虽然许多医疗机构可以生成大量的患者病理图像，但病理图像有效注释的数量少限制了有效病理图像的数量</li>
+<li>病变图像异质性高。在形状和大小上，不同类型病变之间的差异很小，而同一类型病变之间的差异很大。此外，病变与周围组织的对比度较低，导致病变边界模糊，给模型精确定位病变增加了困难。</li>
+<li>病变边界像素难以正确分类。<br><img src="/img/6.jpg" srcset="/img/loading.gif" lazyload alt="肠道分割示意图"></li>
+</ol>
+<h1 id="三-模型结构"><a href="#三-模型结构" class="headerlink" title="三.模型结构"></a>三.模型结构</h1><h2 id="1-PG-SN"><a href="#1-PG-SN" class="headerlink" title="1.PG-SN"></a>1.PG-SN</h2><p><img src="/img/7.jpg" srcset="/img/loading.gif" lazyload alt="模型结构"></p>
+<h2 id="2-Pixel-Gated-Segmentation-Network-PG-SN"><a href="#2-Pixel-Gated-Segmentation-Network-PG-SN" class="headerlink" title="2.Pixel Gated Segmentation Network (PG-SN)"></a>2.Pixel Gated Segmentation Network (PG-SN)</h2><p><img src="/img/8.jpg" srcset="/img/loading.gif" lazyload alt="PG-SN"></p>
+<h2 id="3-SRB-BLOCK"><a href="#3-SRB-BLOCK" class="headerlink" title="3.SRB-BLOCK"></a>3.SRB-BLOCK</h2><p><img src="/img/9.jpg" srcset="/img/loading.gif" lazyload alt="SRB"></p>
+<h2 id="4-Pixel-gated-attention-module（PGA）"><a href="#4-Pixel-gated-attention-module（PGA）" class="headerlink" title="4.Pixel gated attention module（PGA）"></a>4.Pixel gated attention module（PGA）</h2><h3 id="在UNet结构中，编码器特征较低，而解码器特征较高且较抽象。在UNet系列中，编码器特征和解码器特征主要采用直接连接的方式融合，由于特征尺度不均匀，深度细节特征丢失。虽然在跳跃连接上增加了一系列卷积层来缓解语义问题，但如果卷积数不合适，不仅不能缓解特征之间的差异，还会导致其他问题。因此，使用直接连接和增加卷积层的融合方法并不能解决语义差距。"><a href="#在UNet结构中，编码器特征较低，而解码器特征较高且较抽象。在UNet系列中，编码器特征和解码器特征主要采用直接连接的方式融合，由于特征尺度不均匀，深度细节特征丢失。虽然在跳跃连接上增加了一系列卷积层来缓解语义问题，但如果卷积数不合适，不仅不能缓解特征之间的差异，还会导致其他问题。因此，使用直接连接和增加卷积层的融合方法并不能解决语义差距。" class="headerlink" title="在UNet结构中，编码器特征较低，而解码器特征较高且较抽象。在UNet系列中，编码器特征和解码器特征主要采用直接连接的方式融合，由于特征尺度不均匀，深度细节特征丢失。虽然在跳跃连接上增加了一系列卷积层来缓解语义问题，但如果卷积数不合适，不仅不能缓解特征之间的差异，还会导致其他问题。因此，使用直接连接和增加卷积层的融合方法并不能解决语义差距。"></a>在UNet结构中，编码器特征较低，而解码器特征较高且较抽象。在UNet系列中，编码器特征和解码器特征主要采用直接连接的方式融合，由于特征尺度不均匀，深度细节特征丢失。虽然在跳跃连接上增加了一系列卷积层来缓解语义问题，但如果卷积数不合适，不仅不能缓解特征之间的差异，还会导致其他问题。因此，使用直接连接和增加卷积层的融合方法并不能解决语义差距。</h3><p><img src="/img/10.jpg" srcset="/img/loading.gif" lazyload alt="PGA"></p>
+<h2 id="5-Channel-guided-classification-network-CG-CN"><a href="#5-Channel-guided-classification-network-CG-CN" class="headerlink" title="5.Channel guided  classification network (CG-CN)"></a>5.Channel guided  classification network (CG-CN)</h2><h3 id="它由四个部分组成-一个新的分类编码器、一个分类器、一个编码器和一个解码器。编码器和解码器与PG-SN共享相同的结构和参数。"><a href="#它由四个部分组成-一个新的分类编码器、一个分类器、一个编码器和一个解码器。编码器和解码器与PG-SN共享相同的结构和参数。" class="headerlink" title="它由四个部分组成:一个新的分类编码器、一个分类器、一个编码器和一个解码器。编码器和解码器与PG-SN共享相同的结构和参数。"></a>它由四个部分组成:一个新的分类编码器、一个分类器、一个编码器和一个解码器。编码器和解码器与PG-SN共享相同的结构和参数。</h3><p><img src="/img/11.jpg" srcset="/img/loading.gif" lazyload alt="CG-CN"></p>
 
                 
               </div>
@@ -342,7 +335,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%80%BB%E7%BB%93/" class="category-chain-item">总结</a>
+  <a href="/categories/%E8%AE%BA%E6%96%87%E5%88%86%E4%BA%AB/" class="category-chain-item">论文分享</a>
   
   
 
@@ -357,7 +350,13 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%80%BB%E7%BB%93/" class="print-no-link">#总结</a>
+        <a href="/tags/%E7%9B%B4%E8%82%A0/" class="print-no-link">#直肠</a>
+      
+        <a href="/tags/%E5%88%86%E5%89%B2/" class="print-no-link">#分割</a>
+      
+        <a href="/tags/%E5%88%86%E7%B1%BB/" class="print-no-link">#分类</a>
+      
+        <a href="/tags/%E8%AE%BA%E6%96%87%E5%88%86%E4%BA%AB/" class="print-no-link">#论文分享</a>
       
     </div>
   
@@ -369,8 +368,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>静态博客搭建总结报告</div>
-      <div>https://imamtss.github.io/2024/04/17/3/</div>
+      <div>A segmentation-based sequence residual attention model for KRAS gene mutation status prediction in colorectal cancer—— 基于分割序列的残差注意力模型预测结直肠癌KRAS基因突变</div>
+      <div>https://imamtss.github.io/2024/04/17/4/</div>
     </div>
     <div class="license-meta">
       
@@ -414,18 +413,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/04/17/4/" title="A segmentation-based sequence residual attention model for KRAS gene mutation status prediction in colorectal cancer—— 基于分割序列的残差注意力模型预测结直肠癌KRAS基因突变">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">A segmentation-based sequence residual attention model for KRAS gene mutation status prediction in colorectal cancer—— 基于分割序列的残差注意力模型预测结直肠癌KRAS基因突变</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/04/16/2/" title="肺结节">
-                        <span class="hidden-mobile">肺结节</span>
+                      <a href="/2024/04/17/3/" title="静态博客搭建总结报告">
+                        <span class="hidden-mobile">静态博客搭建总结报告</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
