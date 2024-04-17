@@ -76,11 +76,11 @@
     
     <tags>
       
+      <tag>医学图像</tag>
+      
       <tag>肺</tag>
       
       <tag>定位分割</tag>
-      
-      <tag>医学图像</tag>
       
     </tags>
     
@@ -105,11 +105,11 @@
     
     <tags>
       
-      <tag>医学图像</tag>
-      
       <tag>直肠</tag>
       
       <tag>分割任务</tag>
+      
+      <tag>医学图像</tag>
       
     </tags>
     
